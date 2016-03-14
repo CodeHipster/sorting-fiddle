@@ -1,7 +1,7 @@
 package com.oostdam.sort.timings;
 
 import com.oostdam.sort.MergeSort;
-import com.oostdam.sort.TreeSorter;
+import com.oostdam.sort.treesort.TreeSorter;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
 
-        Integer nrOfItems = 10000;
+        Integer nrOfItems = 100000;
 
         List<Integer> dataMergeSort = new ArrayList<>();
         Random random = new Random();
@@ -39,8 +39,7 @@ public class Main {
         System.out.println("Time to sort in ms using merge sort: " + (end-start)/1000000);
 
         start = System.nanoTime();
-        TreeSorter ts = new TreeSorter();
-        ts.sort(dataTreeSort, comparator);
+        TreeSorter.sort(dataTreeSort, comparator);
         end = System.nanoTime();
 
         System.out.println("Time to sort in ms using tree sort: " + (end-start)/1000000);

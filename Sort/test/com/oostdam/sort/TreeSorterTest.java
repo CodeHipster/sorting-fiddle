@@ -1,12 +1,11 @@
 package com.oostdam.sort;
 
+import com.oostdam.sort.treesort.TreeSorter;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Thijs on 3/12/2016.
@@ -23,9 +22,7 @@ public class TreeSorterTest {
         data.add(1);
         data.add(7);
 
-        TreeSorter<Integer> treeSorter = new TreeSorter<>();
-
-        treeSorter.sort(data, (left, right)-> left.compareTo(right));
+        TreeSorter.sort(data, (left, right)-> left.compareTo(right));
 
         Assert.assertTrue(data.get(0) == 1);
         Assert.assertTrue(data.get(1) == 2);
