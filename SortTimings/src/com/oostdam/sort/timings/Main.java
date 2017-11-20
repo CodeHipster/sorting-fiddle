@@ -11,7 +11,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
 
-        Integer nrOfItems = 100000;
+        Integer nrOfItems = 10000000;
 
         List<Integer> dataMergeSort = new ArrayList<>();
         Random random = new Random();
